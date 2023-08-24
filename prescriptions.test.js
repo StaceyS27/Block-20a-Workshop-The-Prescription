@@ -83,12 +83,12 @@ describe("applyDiscount", function() {
   })
 
   it("should provide same price w/ no subscription", function(){
-    result = applyDiscount(100, false);
+   const result = applyDiscount(100, false);
     expect(result).toBe(100)
   })
 
   it.only("should result in a 25% discount", function() {
-    result = applyDiscount(100, true);
+    const result = applyDiscount(100, true);
     expect(result).toBe(75)
   })
 })
@@ -99,12 +99,12 @@ describe("applyCoupon", function () {
   })
 
   it("should return discount of 10 if coupon present", function () {
-    result = applyCoupon(100, true);
+    const result = applyCoupon(100, true);
     expect(result).toBe(90)
   })
 
   it.only("should return same price if no discount present", function () {
-    result = applyCoupon(100, false);
+    const result = applyCoupon(100, false);
     expect(result).toBe(100)
   })
 })
